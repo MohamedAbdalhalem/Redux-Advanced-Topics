@@ -6,6 +6,7 @@ A small React + Redux Toolkit project that demonstrates a **shopping cart flow**
 - **Async Redux actions (thunks)** to **fetch** and **send** cart data
 - A simple UI that works well on **mobile, tablet, and desktop**
 
+
 ## Getting started
 
 Install dependencies:
