@@ -1,0 +1,254 @@
+/* =========================
+   CART ITEM
+========================= */
+
+.item {
+  margin: 1rem 0;
+
+  padding: 1.2rem;
+
+  background: rgba(87, 87, 87, 0.9);
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.item:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.item h3 {
+  margin: 0 0 0.5rem;
+
+  font-size: 1.6rem;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  color: white;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.item header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: baseline;
+
+  gap: 1rem;
+}
+
+/* =========================
+   DETAILS
+========================= */
+
+.details {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+
+  margin-top: 1rem;
+}
+
+.quantity span {
+  font-size: 1.4rem;
+
+  font-weight: bold;
+
+  color: #1ad1b9;
+}
+
+.price {
+  font-size: 1.4rem;
+
+  font-weight: bold;
+
+  color: white;
+}
+
+.itemprice {
+  font-weight: 400;
+
+  font-size: 1rem;
+
+  font-style: italic;
+
+  opacity: 0.85;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  margin-top: 1rem;
+}
+
+.actions button {
+  background-color: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  padding: 0.45rem 1rem;
+
+  color: white;
+
+  border-radius: 10px;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #4b4b4b;
+
+  border-color: #1ad1b9;
+
+  transform: translateY(-2px);
+
+  color: white;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .item {
+    padding: 1rem;
+  }
+
+  .item h3 {
+    font-size: 1.4rem;
+  }
+
+  .quantity span,
+  .price {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .item {
+    padding: 0.9rem;
+
+    border-radius: 14px;
+  }
+
+  .item header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.4rem;
+  }
+
+  .details {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.7rem;
+  }
+
+  .item h3 {
+    font-size: 1.2rem;
+  }
+
+  .quantity span,
+  .price {
+    font-size: 1.05rem;
+  }
+
+  .itemprice {
+    font-size: 0.9rem;
+  }
+
+  .actions {
+    justify-content: stretch;
+
+    width: 100%;
+  }
+
+  .actions button {
+    width: 100%;
+
+    padding: 0.7rem 1rem;
+  }
+}
+
+/* Very Small Phones */
+@media (max-width: 360px) {
+  .item {
+    padding: 0.75rem;
+  }
+
+  .item h3 {
+    font-size: 1rem;
+  }
+
+  .quantity span,
+  .price {
+    font-size: 0.95rem;
+  }
+
+  .itemprice {
+    font-size: 0.82rem;
+  }
+
+  .actions button {
+    font-size: 0.85rem;
+
+    padding: 0.65rem 0.8rem;
+  }
+}
+
+/* Landscape Phones */
+@media (max-height: 500px) and (orientation: landscape) {
+  .item {
+    padding: 0.8rem 1rem;
+  }
+
+  .details {
+    margin-top: 0.6rem;
+  }
+
+  .actions {
+    margin-top: 0.7rem;
+  }
+}

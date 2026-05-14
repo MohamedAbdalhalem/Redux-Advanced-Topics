@@ -1,0 +1,143 @@
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  padding: 0.75rem 1.2rem;
+
+  border: 1px solid #1ad1b9;
+
+  border-radius: 14px;
+
+  background-color: transparent;
+
+  color: #1ad1b9;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.button:hover,
+.button:active {
+  background-color: #1ad1b9;
+
+  border-color: #1ad1b9;
+
+  color: white;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(26, 209, 185, 0.25);
+}
+
+.button span {
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 32px;
+
+  padding: 0.2rem 0.9rem;
+
+  border-radius: 999px;
+
+  background-color: #1ad1b9;
+
+  color: #1d1d1d;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .button {
+    padding: 0.7rem 1rem;
+
+    font-size: 0.95rem;
+  }
+
+  .badge {
+    padding: 0.2rem 0.8rem;
+
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .button {
+    width: 100%;
+
+    padding: 0.85rem 1rem;
+
+    border-radius: 12px;
+
+    font-size: 0.92rem;
+  }
+
+  .badge {
+    min-width: 28px;
+
+    padding: 0.18rem 0.7rem;
+
+    font-size: 0.78rem;
+  }
+}
+
+/* Very Small Phones */
+@media (max-width: 360px) {
+  .button {
+    padding: 0.75rem 0.9rem;
+
+    font-size: 0.85rem;
+
+    gap: 0.35rem;
+  }
+
+  .badge {
+    padding: 0.15rem 0.6rem;
+
+    font-size: 0.72rem;
+  }
+}
+
+/* Landscape Phones */
+@media (max-height: 500px) and (orientation: landscape) {
+  .button {
+    padding: 0.65rem 0.9rem;
+  }
+}

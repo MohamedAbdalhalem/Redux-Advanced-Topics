@@ -1,0 +1,123 @@
+/* =========================
+   PRODUCTS
+========================= */
+
+.products {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.products h2 {
+  margin: 2rem auto;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  color: white;
+
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1.3;
+}
+
+/* =========================
+   PRODUCT LIST
+========================= */
+
+.products ul {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Desktop */
+@media (min-width: 900px) {
+  .products ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .products ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .products h2 {
+    margin: 1.8rem auto;
+
+    font-size: 2rem;
+
+    letter-spacing: 1.5px;
+  }
+
+  .products ul {
+    gap: 0.9rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .products h2 {
+    margin: 1.5rem auto;
+
+    font-size: 1.5rem;
+
+    letter-spacing: 1px;
+
+    padding-inline: 0.5rem;
+  }
+
+  .products ul {
+    gap: 0.8rem;
+  }
+}
+
+/* Very Small Phones */
+@media (max-width: 360px) {
+  .products h2 {
+    margin: 1.2rem auto;
+
+    font-size: 1.2rem;
+
+    letter-spacing: 0.8px;
+  }
+
+  .products ul {
+    gap: 0.6rem;
+  }
+}
+
+/* Landscape Phones */
+@media (max-height: 500px) and (orientation: landscape) {
+  .products h2 {
+    margin: 1rem auto;
+  }
+
+  .products ul {
+    gap: 0.5rem;
+  }
+}

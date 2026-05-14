@@ -1,0 +1,145 @@
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  width: 100%;
+
+  min-height: 5rem;
+
+  padding-inline: clamp(1rem, 4vw, 3rem);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(37, 36, 36, 0.92);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.2);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.header h1 {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(1.3rem, 2vw, 2rem);
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  white-space: nowrap;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.header ul {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .header {
+    padding-inline: 1rem;
+  }
+
+  .header ul {
+    gap: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .header {
+    min-height: auto;
+
+    padding: 1rem;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.3rem;
+
+    text-align: center;
+  }
+
+  .header ul {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 0.7rem;
+  }
+}
+
+/* Very Small Phones */
+@media (max-width: 360px) {
+  .header {
+    padding: 0.8rem;
+  }
+
+  .header h1 {
+    font-size: 1.1rem;
+  }
+
+  .header ul {
+    gap: 0.5rem;
+  }
+}
+
+/* Landscape Phones */
+@media (max-height: 500px) and (orientation: landscape) {
+  .header {
+    min-height: 4rem;
+
+    padding: 0.6rem 5%;
+
+    flex-direction: row;
+  }
+
+  .header ul {
+    flex-direction: row;
+
+    gap: 0.8rem;
+  }
+}
